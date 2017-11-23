@@ -5,51 +5,54 @@ set(config_module_list
 	#
 	# Board support modules
 	#
+	drivers/airspeed
+	#drivers/blinkm
+	drivers/boards
+	#drivers/bst
+	drivers/camera_trigger
 	drivers/device
+	#drivers/ets_airspeed
+	drivers/frsky_telemetry
+	drivers/gps
+	drivers/hmc5883
+	#drivers/hott
+	#drivers/hott/hott_sensors
+	#drivers/hott/hott_telemetry
+	#drivers/iridiumsbd
+	#drivers/irlock
+	#drivers/ist8310
+	drivers/l3gd20
+	drivers/led
+	drivers/lis3mdl
+	drivers/ll40ls
+	drivers/lsm303d
+	#drivers/mb12xx
+	#drivers/mkblctrl
+	drivers/mpu6000
+	drivers/mpu9250
+	drivers/ms4525_airspeed
+	drivers/ms5525_airspeed
+	drivers/ms5611
+	#drivers/oreoled
+	#drivers/protocol_splitter
+	drivers/pwm_input
+	drivers/pwm_out_sim
+	drivers/px4flow
+	drivers/px4fmu
+	drivers/px4io
+	drivers/rgbled
+	drivers/sdp3x_airspeed
+	drivers/sf0x
+	drivers/sf1xx
+	#drivers/snapdragon_rc_pwm
+	#drivers/srf02
 	drivers/stm32
 	drivers/stm32/adc
 	drivers/stm32/tone_alarm
-	drivers/led
-	drivers/px4fmu
-	drivers/px4io
-	drivers/boards
-	drivers/rgbled
-	drivers/mpu6000
-	drivers/mpu9250
-	drivers/lsm303d
-	drivers/l3gd20
-	drivers/hmc5883
-	drivers/ms5611
-	#drivers/mb12xx
-	#drivers/srf02
-	drivers/sf0x
-	drivers/sf1xx
-	drivers/ll40ls
 	drivers/teraranger
-	drivers/gps
-	drivers/pwm_out_sim
-	#drivers/hott
-	#drivers/hott/hott_telemetry
-	#drivers/hott/hott_sensors
-	#drivers/blinkm
-	drivers/airspeed
-	#drivers/ets_airspeed
-	drivers/ms4525_airspeed
-	drivers/ms5525_airspeed
-	drivers/sdp3x_airspeed
-	drivers/frsky_telemetry
-	modules/sensors
-	#drivers/mkblctrl
-	drivers/px4flow
-	#drivers/oreoled
-	drivers/vmount
-	drivers/pwm_input
-	drivers/camera_trigger
-	#drivers/bst
-	#drivers/snapdragon_rc_pwm
-	drivers/lis3mdl
-	#drivers/iridiumsbd
 	#drivers/ulanding
+	drivers/vmount
+	modules/sensors
 
 	#
 	# System commands
@@ -77,9 +80,9 @@ set(config_module_list
 	#
 	#drivers/sf0x/sf0x_tests
 	#drivers/test_ppm
+	#lib/controllib/controllib_test
 	#lib/rc/rc_tests
 	#modules/commander/commander_tests
-	#lib/controllib/controllib_test
 	#modules/mavlink/mavlink_tests
 	#modules/uORB/uORB_tests
 	#systemcmds/tests
@@ -87,23 +90,23 @@ set(config_module_list
 	#
 	# General system control
 	#
+	modules/camera_feedback
 	modules/commander
 	modules/events
-	modules/load_mon
-	modules/navigator
-	modules/mavlink
 	#modules/gpio_led
-	#modules/uavcan
 	modules/land_detector
-	modules/camera_feedback
+	modules/load_mon
+	modules/mavlink
+	modules/navigator
+	#modules/uavcan
 
 	#
 	# Estimation modules
 	#
 	#modules/attitude_estimator_q
-	#modules/position_estimator_inav
-	#modules/local_position_estimator
 	modules/ekf2
+	#modules/local_position_estimator
+	#modules/position_estimator_inav
 
 	#
 	# Vehicle Control
@@ -125,10 +128,10 @@ set(config_module_list
 	#
 	# Library modules
 	#
-	modules/systemlib/param
-	modules/systemlib
-	modules/uORB
 	modules/dataman
+	modules/systemlib
+	modules/systemlib/param
+	modules/uORB
 
 	#
 	# Libraries
